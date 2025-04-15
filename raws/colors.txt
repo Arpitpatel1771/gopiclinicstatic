@@ -1,0 +1,6 @@
+[logo]
+golden = #b78212
+blue = #01004e
+
+[site]
+golden = #DB9D18
