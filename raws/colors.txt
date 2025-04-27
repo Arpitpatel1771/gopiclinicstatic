@@ -4,3 +4,5 @@ blue = #01004e
 
 [site]
 golden = #DB9D18
+blue = #01004e
+navMenu = #103772
