@@ -22,17 +22,18 @@ export default function NavbarHeader({
   hamburgerClassName,
   hamburgerColor = "#000",
   logoSrc = "/logo.svg",
+  imgSize = 40,
 }) {
   return (
     <div
-      className={`container mx-auto h-16 flex text-2xl font-bold justify-between items-center px-4 ${containerClassName}`}
+      className={`mx-auto flex text-2xl font-bold justify-between items-center ${containerClassName}`}
     >
       <Link href="#" className="flex items-end hover:cursor-pointer">
         <Image
           src={logoSrc}
           alt="Logo"
-          width={40}
-          height={40}
+          width={imgSize}
+          height={imgSize}
           className={`inline-block ${logoImgClassName}`}
         />
         <span
