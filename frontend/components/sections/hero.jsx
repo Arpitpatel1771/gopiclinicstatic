@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { CheckCircle, Star } from "lucide-react";
 
+const config = {
+  title: `Expert Hair\u00A0&\u00A0Skin Solutions\u00A0in`,
+  subtitle: "Surat",
+  description:
+    "Targeted treatments for lasting results. From acne to hairfall, we help you feel confident in your skin.",
+  description_short:
+    "Personalized hair and skin care that helps you feel confident, and ready for anything.",
+};
+
 export default function Hero() {
   return (
     <Section className={"h-fit hero-pattern md:px-8 md:py-12"}>
@@ -21,16 +30,17 @@ export default function Hero() {
         </div>
         <div className="p-4 flex flex-col gap-4">
           <div className="text-3xl tracking-tighter font-bold">
-            <p>Expert Hair & Skin Care by</p>
-            <p className="text-goldAcc"> Drx Gopi Dholiya</p>
+            <p>
+              {config.title}
+              <span className="text-goldAcc"> {config.subtitle}</span>
+            </p>
           </div>
           {/* <div className="text-lg tracking-tight hidden md:block">
           Your trusted destination for all hair and skin treatments. Our expert
           dermatologists provide personalized care for all your needs.
         </div> */}
           <div className="text-lg tracking-tight">
-            Personalized hair and skin care that helps you feel confident, and
-            ready for anything.
+            {config.description_short}
           </div>
           <div className="flex gap-4 flex-wrap">
             <Button asChild className={"grow-1 hover:cursor-pointer font-bold"}>
@@ -49,13 +59,11 @@ export default function Hero() {
       <div className="hidden md:grid md:grid-cols-2 md:gap-12">
         <div className="p-4 flex flex-col gap-4 justify-center">
           <div className="text-4xl lg:text-5xl tracking-tighter font-bold">
-            <p>Expert Hair & Skin Care&nbsp;by</p>
-            <p className="text-goldAcc"> Drx Gopi Dholiya</p>
+            <p>{config.title}</p>
+            <p className="text-goldAcc"> {config.subtitle}</p>
           </div>
           <div className="text-lg lg:text-xl tracking-tight">
-            Trusted by hundreds for her gentle approach and results-driven care
-            —&nbsp;Drx&nbsp;Gopi&nbsp;Dholiya is here to help you feel your
-            best.
+            {config.description}
           </div>
           <div className="flex gap-4 flex-wrap">
             <Button

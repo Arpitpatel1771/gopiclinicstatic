@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Navbar from "@/components/navbar/navbar";
 
 import "./globals.css";
 
@@ -18,7 +19,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} antialiased`}
       >
-        {children}
+        <Navbar />
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );

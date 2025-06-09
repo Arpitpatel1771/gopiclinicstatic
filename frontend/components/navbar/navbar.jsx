@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/button";
 const navbarItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
-  { name: "Services", href: "/#services" },
+  { name: "Services", href: "/services" },
+  { name: "Results", href: "/#results" },
   { name: "Contact", href: "/#contact" },
 ];
 
@@ -27,7 +28,7 @@ export default function Navbar() {
   return (
     <>
       {/* Mobile Navbar */}
-      <nav className="sticky top-0 z-50 text-impBlue backdrop-blur bg-white/60 border-b border-gray-200 block md:hidden">
+      <nav className="sticky top-0 z-50 text-impBlue backdrop-blur-2xl bg-white/75 border-b border-gray-200 block md:hidden">
         <NavbarHeader
           isOpen={isOpen}
           setIsOpen={handleToggle}
@@ -63,7 +64,7 @@ export default function Navbar() {
         </div>
       </nav>
       {/* Non Mobile Navbar */}
-      <nav className="sticky h-20 top-0 z-50 text-impBlue backdrop-blur bg-white/60 border-b border-gray-200 hidden md:block">
+      <nav className="sticky h-20 top-0 z-50 text-impBlue backdrop-blur-2xl bg-white/75 border-b border-gray-200 hidden md:block">
         <div className="mx-auto flex gap-8 justify-between items-center h-20 px-6 max-w-7xl">
           <Link
             href="#home"
