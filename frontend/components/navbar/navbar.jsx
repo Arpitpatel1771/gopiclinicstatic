@@ -9,13 +9,14 @@ import { Button } from "@/components/ui/button";
 const navbarItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
-  { name: "Services", href: "/services" },
-  { name: "Results", href: "/#results" },
+  { name: "Services", href: "/#services" },
+  // { name: "Results", href: "/#results" },
   { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const phone = process.env.NEXT_PUBLIC_CLINIC_PHONE || "";
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
@@ -94,7 +95,7 @@ export default function Navbar() {
           </div>
           <div className="hidden lg:block">
             <Button asChild className={"hover:cursor-pointer font-bold"}>
-              <Link href="tel:+917431011333">Book Appointment</Link>
+              <Link href={`tel:${phone}`}>Book Appointment</Link>
             </Button>
           </div>
         </div>

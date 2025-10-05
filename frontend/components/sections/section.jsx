@@ -1,5 +1,7 @@
-export default function Section({ children, className }) {
+export default function Section({ children, className, id }) {
   return (
-    <section className={`w-full mx-auto ${className}`}>{children}</section>
+    <section id={id || null} className={`w-full mx-auto ${className}`}>
+      {children}
+    </section>
   );
 }

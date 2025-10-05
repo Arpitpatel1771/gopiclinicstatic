@@ -14,6 +14,7 @@ const config = {
 };
 
 export default function Hero() {
+  const phone = process.env.NEXT_PUBLIC_CLINIC_PHONE || "";
   return (
     <Section className={"h-fit hero-pattern md:px-8 md:py-12"}>
       <div className="block md:hidden">
@@ -71,7 +72,7 @@ export default function Hero() {
               size={"lg"}
               className={"grow-1 hover:cursor-pointer font-bold"}
             >
-              <Link href="tel:+917431011333">Book Appointment</Link>
+              <Link href={`tel:${phone}`}>Book Appointment</Link>
             </Button>
             <Button
               asChild
