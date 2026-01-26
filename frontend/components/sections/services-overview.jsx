@@ -1,6 +1,7 @@
 "use client";
 
 import Section from "@/components/sections/section";
+import Link from "next/link";
 import BeforeAfterSlider from "react-before-after-slider-component";
 import "react-before-after-slider-component/dist/build.css";
 
@@ -43,9 +44,9 @@ function ServiceCard({ service }) {
           width: "40px",
           height: "40px",
           backgroundSize: "cover",
-          borderRadius: "none",
+          borderRadius: "50%",
           backgroundImage:
-            "url(https://staging.svgrepo.com/show/408895/left-right.svg)",
+            "url(/left-right.png)",
         }}
       />
       <h3 className="mt-4 text-xl font-semibold text-gray-700">
@@ -62,12 +63,14 @@ export default function ServicesOverview() {
       id="services"
       className="h-fit py-8 flex flex-col items-center gap-4 justify-center scroll-mt-16 md:scroll-mt-18"
     >
-      <h1 className="text-4xl tracking-tight font-bold text-gray-700">
-        Our Services
-      </h1>
-      <h2 className="text-lg text-gray-500 text-center">
-        Explore our range of skin and hair treatments designed for you.
-      </h2>
+      <Link href="/services" className="h-fit flex flex-col items-center gap-4 justify-center scroll-mt-16 md:scroll-mt-18">
+        <h1 className="text-4xl tracking-tight font-bold text-gray-700">
+          Our Services
+        </h1>
+        <h2 className="text-lg text-gray-500 text-center">
+          Explore our range of skin and hair treatments designed for you.<br /><strong className="hover:text-impBlue">Check out all our services</strong>
+        </h2>
+      </Link>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 justify-items-center mt-8">
         {our_services.map((service, idx) => (
           <ServiceCard key={idx} service={service} />

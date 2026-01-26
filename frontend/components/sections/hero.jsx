@@ -16,7 +16,7 @@ const config = {
 export default function Hero() {
   const phone = process.env.NEXT_PUBLIC_CLINIC_PHONE || "";
   return (
-    <Section className={"h-fit hero-pattern md:px-8 md:py-12"}>
+    <Section className={"h-fit hero-pattern md:px-8 md:py-12 scroll-mt-16 md:scroll-mt-18"} id={"home"}>
       <div className="block md:hidden">
         <div className="">
           <div className="overflow-hidden shadow-lg">

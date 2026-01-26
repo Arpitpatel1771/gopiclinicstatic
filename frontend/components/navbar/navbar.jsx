@@ -7,10 +7,10 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const navbarItems = [
-  { name: "Home", href: "/" },
+  { name: "Home", href: "/#home" },
   { name: "About", href: "/#about" },
-  { name: "Services", href: "/#services" },
-  // { name: "Results", href: "/#results" },
+  { name: "Services", href: "/services" },
+  // { name: "Testimonials", href: "/#testimonials" },
   { name: "Contact", href: "/#contact" },
 ];
 
